@@ -14,7 +14,7 @@ var scroll = $("#myList").scrollLoad({
         var list = data.result.list;
         for (var i = 0; i < list.length; i++) {
             var item = list[i];
-             var $item = $('<li>' + item.name + '</li>');
+            var $item = $('<li>' + item.name + '</li>');
            $wrapper.append($item);
         }
 
