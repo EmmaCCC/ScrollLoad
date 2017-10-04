@@ -2,7 +2,7 @@
 一个jquery滚动加载插件
 
 
-```
+```js
 var scroll = $("#myList").scrollLoad({
     url: '/data.json?pageIndex={{pageIndex}}',
     param: {
