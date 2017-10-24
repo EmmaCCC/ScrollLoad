@@ -122,10 +122,11 @@
                             _self.$loading.show().html(this.settings.finishTips);
                           
                         }
-                        _self.currentPage++;
-                        //wrapper存储上一次的页码 当切换两个或者多个容器时可以用到 记录每个容器加载到第几页了
+                    
                         _self.$element.data('currentPage', _self.currentPage);
                         _self.settings.nextPage(data, _self.$element, _self.currentPage);
+                        _self.currentPage++;
+                        //wrapper存储上一次的页码 当切换两个或者多个容器时可以用到 记录每个容器加载到第几页了
                     } else {
                         throw Error('data is ' + data);
                     }
