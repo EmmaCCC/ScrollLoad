@@ -1,7 +1,9 @@
 ﻿//author:Emma
-//date:201709.24
+//qq:526457385
+//email:526457385@qq.com
+//date:2017.10.24
 //name:scrollLoad 滚动加载插件
-//version:1.3.0
+//version:1.4.0
 
 
 ; (function ($, window, document, undefined) {
@@ -132,7 +134,12 @@
 
 
         },
-
+        reload: function () {
+            this.isBusy = this.isFinish = false;
+            this.$element.empty();
+            this.currentPage = 1;
+            this._loadData();
+        },
         Options: function () {
             return this.settings;
         }
