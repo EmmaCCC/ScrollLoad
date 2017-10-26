@@ -115,7 +115,7 @@ var scroll = $("#myList").scrollLoad({
     }
 })
 ```
-- 默认loading提示为文字提示，如下所示，通过覆盖这些参数的值可以支持自定义提示，并且支持html结构。
+- 默认loading提示为文字提示，如下所示，通过覆盖这些参数的值可以支持自定义提示，支持html结构。
 ```js
   var defaults = {
         ...
@@ -130,7 +130,7 @@ var scroll = $("#myList").scrollLoad({
 
 ---
 #### 1.3 自定义要监听的容器
-- 插件默认监听的是当前窗口，当然你也可以监听某个div容器，插件只会捕捉该div的滚动条滚动事件，并在滚动条到达底部时触发ajax请求并在完成时nextPage函数。
+- 插件默认监听的是当前窗口window，当然你也可以监听某个div容器，插件只会捕捉该div的滚动条滚动事件，并在滚动条到达底部时触发ajax请求并在完成时调用nextPage函数。
 - 
 ```js
   var defaults = {
