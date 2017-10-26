@@ -17,9 +17,9 @@
         isMakeEmpty: true,                  //当重新加载数据到一个容器中时，是否清空以前的数据，默认清空
         distantToBottom: 0,                 //当滚动条距离底部多少像素时触发加载事件
         loading: "#loading",                //加载提示的选择器
-        loadingTips: "数据正在加载中...",     //数据正在加载时的提示
-        finishTips: "数据已经全部加载完毕",   //数据加载完毕时的提示
-        noDataTips: "暂无数据",              //没有数据时的提示
+        loadingTips: '数据正在加载中...',     //数据正在加载时的提示
+        finishTips: '数据已经全部加载完毕',   //数据加载完毕时的提示
+        noDataTips: '暂无数据',              //没有数据时的提示
         noDataCondition: function (data) {  //需要使用者根据个人情况给出没有数据时的条件，参数为异步请求返回来的数据
         //1.如果没有数据返回true，否则返回false
             if (data.status ===0 && data.result.list.length === 0 )
