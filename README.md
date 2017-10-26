@@ -81,7 +81,7 @@ var scroll = $("#myList").scrollLoad({
     }
 })
 ```
-- 设置div的高度，是窗口出现滚动条，然后滑动滚动条到底部，nextPage函数会自动被调用，参数 data：异步请求返回的数据；$wrapper:当前选择的div容器；currentPage：当前加载的第几页的数据（滚动加载实际上就是分页加载的另一种形式）。
+- 设置div的高度，使窗口出现滚动条，然后滑动滚动条到底部，nextPage函数会自动被调用，参数 data：异步请求返回的数据；$wrapper:当前选择的div容器；currentPage：当前加载的第几页的数据（滚动加载实际上就是分页加载的另一种形式）。
  
 
 ---
