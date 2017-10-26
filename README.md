@@ -99,10 +99,13 @@ var scroll = $("#myList").scrollLoad({
     <script src="jquery.scrollLoad-1.4.0.js"></script> <!--引入scrollLoad插件-->
 </body>
 ```
+- 为插件加上设置loading参数的值为#loading选择器
 ```js
 var scroll = $("#myList").scrollLoad({
     url: '/data.json?pageIndex={{pageIndex}}',
+    ...
     loading:'#loading',
+    ...
     nextPage: function (data, $wrapper, currentPage) {
    //这里拿到$wrapper可以进行dom操作，渲染数据
         var list = data.result.list;
@@ -131,7 +134,6 @@ var scroll = $("#myList").scrollLoad({
 ---
 #### 1.3 自定义要监听的容器
 - 插件默认监听的是当前窗口window，当然你也可以监听某个div容器，插件只会捕捉该div的滚动条滚动事件，并在滚动条到达底部时触发ajax请求并在完成时调用nextPage函数。
-- 
 ```js
   var defaults = {
         url: '/data.json?pageIndex={{pageIndex}}',
