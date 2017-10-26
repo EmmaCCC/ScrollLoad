@@ -14,8 +14,8 @@
         scrollContainer: window,            //要监听滚动条事件的容器，默认为window
         pageIndex: 1,                       //初始化时要加载的是第几页，默认为第一页
         isInitLoad: true,                   //是否在页面一显示就加载第一页数据，默认为加载
-        isMakeEmpty: true,                  //当重新加载到一个容器中时，是否清空以前的数据，默认清空
-        distantToBottom: 0,                 //当滚动条距离底部多少像素时出发加载事件
+        isMakeEmpty: true,                  //当重新加载数据到一个容器中时，是否清空以前的数据，默认清空
+        distantToBottom: 0,                 //当滚动条距离底部多少像素时触发加载事件
         loading: "#loading",                //加载提示的选择器
         loadingTips: "数据正在加载中...",     //数据正在加载时的提示
         finishTips: "数据已经全部加载完毕",   //数据加载完毕时的提示
@@ -27,7 +27,7 @@
             return false;
         },
         finishCondition: function (data) {//需要使用者根据个人情况给出数据加载完毕时的条件，参数为异步请求返回来的数据
-        //2.如果有数据切数据已经加载完毕返回true，否则返回false
+        //2.如果有数据且数据已经加载完毕返回true，否则返回false
             if (data.status === 0 && data.result.list.length === 0)
                 return true;
             return false;
