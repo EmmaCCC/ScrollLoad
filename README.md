@@ -21,14 +21,14 @@
         finishTips: '数据已经全部加载完毕',   //数据加载完毕时的提示
         noDataTips: '暂无数据',              //没有数据时的提示
         noDataCondition: function (data) {  //需要使用者根据个人情况给出没有数据时的条件，参数为异步请求返回来的数据
-        //1.如果没有数据返回true，否则返回false
-            if (data.status ===0 && data.result.list.length === 0 )
+        //1.如果没有数据请返回true，否则返回false，插件根据返回值来控制加载信息的提示
+            if (data.status ===0 && data.result.list.length === 0 )
                 return true;
             return false;
         },
         finishCondition: function (data) {//需要使用者根据个人情况给出数据加载完毕时的条件，参数为异步请求返回来的数据
-        //2.如果有数据且数据已经加载完毕返回true，否则返回false
-            if (data.status === 0 && data.result.list.length === 0)
+        //2.如果有数据且数据已经加载完毕请返回true，否则返回false，插件根据返回值来控制加载信息的提示
+            if (data.status === 0 && data.result.list.length === 0)
                 return true;
             return false;
         },
