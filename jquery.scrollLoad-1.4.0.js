@@ -70,7 +70,7 @@
                 var $this = $(this);
                 if (this === window) {
                     if ($(document).height() - $(window).height() - $(document).scrollTop() <= _this.settings.distantToBottom) {
-                    console.log($(document).height(), $(window).height(), $(document).scrollTop());
+                   // console.log($(document).height(), $(window).height(), $(document).scrollTop());
                         _this._loadData();
 
                     }
@@ -79,7 +79,7 @@
                     var contentHeight = $this.get(0).scrollHeight; //内容高度
 
                     var scrollTop = $this.scrollTop();//滚动高度
-                    console.log(viewHeight, contentHeight, scrollTop);
+                   // console.log(viewHeight, contentHeight, scrollTop);
 
                     if (contentHeight - viewHeight - scrollTop <= _this.settings.distantToBottom) { //到达底部100px时,加载新内容
                         _this._loadData();
@@ -154,20 +154,3 @@
 })($, window, document);
 
 
-//var scroll = $("#myList").scrollLoad({
-//    url: '/data.json?pageIndex={{pageIndex}}',
-//    param: {
-//        type: type,
-//        state: 1
-//    },
-//    loading: "#loading",
-//    nextPage: function (data, $wrapper, currentPage) {
-//        var list = data.result.list;
-//        for (var i = 0; i < list.length; i++) {
-//            var item = list[i];
-//            var $item = $('<li>' + item.name + '</li>')
-//            $wrapper.append($item);
-//        }
-
-//    }
-//})
