@@ -158,9 +158,6 @@ var scroll = $("#myList").scrollLoad({
         param: {
             type:1,
             state:'action', //添加额外的参数
-            user:function(){
-                return 
-            }
         },  
     }
 })
@@ -170,7 +167,7 @@ var scroll = $("#myList").scrollLoad({
 var userType = ''; //这里的userType可能随着你的点击的不同而变化
 
 $('#btn1,#btn2').click(function(){
-            userType = $(this).data('userType');
+       userType = $(this).data('userType');
 });
 
 var scroll = $("#myList").scrollLoad({
@@ -197,10 +194,10 @@ var scroll = $("#myList").scrollLoad({
         noDataCondition: function (data) {  
         //1.如果没有数据请返回true，否则返回false，插件根据返回值来控制加载信息的提示
             if (data.status ===0 && data.result.list.length === 0 )
-                return true; //这里根据我自己返回的数据，当状态为0企鹅数据list的长度为0时表示没有数据
+                return true; //这里根据我自己返回的数据，当状态为0且数据list的长度为0时表示没有数据
             return false;
         },
-        finishCondition: function (data) {//需要使用者根据个人情况给出数据加载完毕时的条件，参数为异步请求返回来的数据
+        finishCondition: function (data) {
         //2.如果有数据且数据已经加载完毕请返回true，否则返回false，插件根据返回值来控制加载信息的提示
             if (data.status === 0 && data.result.pageIndex > 1 && 
             data.result.list.length < pageSize)
@@ -224,7 +221,7 @@ var defaults = {
         pageIndex: 1,                       //初始化时要加载的是第几页，默认为第一页,可以自定义初始加载某一页
         isInitLoad: true,                   //是否在页面一显示就加载第一页数据，默认为加载
         isMakeEmpty: true,                  //当重新加载数据到一个容器中时，是否清空以前的数据，默认清空
-        distantToBottom: 100,                 //当滚动条距离底部100像素时触发加载事件
+        distantToBottom: 100,               //当滚动条距离底部100像素时触发加载事件
  
 };
 ```
