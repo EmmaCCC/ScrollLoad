@@ -228,6 +228,18 @@ var defaults = {
  
 };
 ```
+### 二、公开的方法
+- 插件内部提供了部分公共方法，可以使用插件的返回值来调用。
+```js
+var scroll = $("#myList").scrollLoad({
+        url: '/data.json?pageIndex={{pageIndex}}',
+        ...                   
+    }
+})
 
-### 二、关于作者
+scroll.reload(); //reload公开方法，该方法调用后会清空$wrapper的内容并且重新加载第一页的数据。
+
+scroll.options(); // options方法，该方法调用后返回当前的配置项。
+```
+### 三、关于作者
 - 如果有什么疑问，可以联系作者QQ 526457385，也欢迎批评指正，欢迎Fork。

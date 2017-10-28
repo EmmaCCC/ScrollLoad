@@ -1,9 +1,9 @@
-﻿//author:Emma
-//qq:526457385
-//email:526457385@qq.com
-//date:2017.10.24
-//name:scrollLoad 滚动加载插件
-//version:1.4.0
+﻿//Author:Emma
+//QQ:526457385
+//Email:526457385@qq.com
+//Date:2017.10.24
+//Name:scrollLoad 滚动加载插件
+//Version:1.4.0
 
 
 ; (function ($, window, document, undefined) {
@@ -141,7 +141,7 @@
             this.currentPage = 1;
             this._loadData();
         },
-        Options: function () {
+        options: function () {
             return this.settings;
         }
     }
