@@ -29,12 +29,12 @@
                 finishTips: "数据已经全部加载完毕",   //数据加载完毕时的提示
                 noDataTips: "暂无数据",              //没有数据时的提示
                 noDataCondition: function (data) {  //需要使用者给出没有数据时的条件，参数为异步请求返回来的数据
-                    if (data.status === 0 && data.result.pageIndex === 0)
+                    if (data.status === 0 && data.result.totalCount === 0)
                         return true;
                     return false;
                 },
                 finishCondition: function (data) {//需要使用者给出数据加载完毕时的条件，参数为异步请求返回来的数据
-                    if (data.status === 0 && data.result.list.length === 0)
+                    if (data.status === 0 && data.result.list.length < data.result.pageSize && data.result.totalCount>0)
                         return true;
                     return false;
                 },
