@@ -113,13 +113,13 @@
                     if (data) {
                         if (_self.settings.noDataCondition(data)) {
                             _self.isFinish = true;
-                            _self.$loading.show().html(this.settings.noDataTips);
+                            _self.$loading.show().html(_self.settings.noDataTips);
                            
                         }
 
                         if (_self.settings.finishCondition(data)) {
                             _self.isFinish = true;
-                            _self.$loading.show().html(this.settings.finishTips);
+                            _self.$loading.show().html(_self.settings.finishTips);
                           
                         }
                     
