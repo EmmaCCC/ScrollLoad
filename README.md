@@ -90,7 +90,7 @@ var scroll = $("#myList").scrollLoad({
     ...
     <div id="myList">
     </div>
-    <p id="#loading"></p>
+    <p id="loading"></p>
     ...
     <script src="jquery.js"></script> <!--引入jquery-->
     <script src="jquery.scrollLoad-1.4.0.js"></script> <!--引入scrollLoad插件-->
